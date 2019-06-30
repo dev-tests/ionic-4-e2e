@@ -8,7 +8,11 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-label>Valores</ion-label>
+    <ion-select placeholder="Selecione 1" [(ngModel)]="valor">
+      <ion-select-option class="valores" value="0">Valor 0</ion-select-option>
+      <ion-select-option value="1">Valor 1</ion-select-option>
+      <ion-select-option value="2">Valor 2</ion-select-option>
+    </ion-select>
   </div>
 </ion-content>
