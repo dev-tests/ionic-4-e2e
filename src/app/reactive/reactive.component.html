@@ -1,0 +1,10 @@
+<p>
+  {{palavra}}
+  {{ (endereco | async)?.cep }}
+</p>
+
+<p *ngFor="let d of data;trackBy: trackByFn">
+  {{d}}
+</p>
+
+<ion-input type="text" id="teste" value="Teste"></ion-input>

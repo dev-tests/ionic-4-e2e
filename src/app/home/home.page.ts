@@ -1,19 +1,19 @@
-import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { Component } from '@angular/core'
+import { AlertController } from '@ionic/angular'
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  styleUrls: ['home.page.scss']
 })
 export class HomePage {
   valor: number
 
-  constructor(public alertController: AlertController) {
+  constructor (public alertController: AlertController) {
     this.presentAlert()
   }
 
-  async presentAlert() {
+  async presentAlert () {
     const alert = await this.alertController.create({
       header: 'Alert',
       subHeader: 'Subtitle',
@@ -23,20 +23,20 @@ export class HomePage {
         role: 'cancel',
         cssClass: 'secondary',
         handler: (blah) => {
-          console.log('Confirm Cancel: blah');
+          console.log('Confirm Cancel: blah')
         }
       }, {
         text: 'Okay',
         handler: () => {
-          console.log('Confirm Okay');
+          console.log('Confirm Okay')
         }
       }
       ]
-    });
-    await alert.present();
+    })
+    await alert.present()
   }
 
-  async dismissAlert() {
+  async dismissAlert () {
     await this.alertController.dismiss()
   }
 
