@@ -1,15 +1,16 @@
-import { AppPage } from './app.po';
+import { AppPage } from './app.po'
 
 describe('new App', () => {
-  let page: AppPage;
+  let page: AppPage
 
   beforeEach(() => {
-    page = new AppPage();
-  });
+    page = new AppPage()
+  })
 
   it('should be blank', async () => {
-    page.navigateTo();
+    page.navigateTo()
     const result = await page.selectItem()
-    expect(result).toBeTruthy()
-  });
-});
+    console.log(result)
+    expect(result).toBe('Roniel')
+  })
+})
